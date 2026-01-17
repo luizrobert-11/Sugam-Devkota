@@ -2,86 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sugam Devkota | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">Sugam Devkota</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- HERO -->
+<section class="hero">
+  <h1>Sugam Devkota</h1>
+  <p>Web Developer • Game Creator • Student</p>
+</section>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Hello, I'm <span>Sugam Devkota</span></h1>
-      <p>Student • Web Developer • Game Creator</p>
-      <a href="#projects" class="btn">View My Work</a>
+<!-- ABOUT + SKILLS -->
+<section class="split-section">
+
+  <!-- Skills -->
+  <div class="card skills-card">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg">
     </div>
-  </section>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="about">
+  <!-- About -->
+  <div class="card about-card">
     <h2>About Me</h2>
     <p>
-      I'm a passionate student developer interested in web development, game creation, and electronics.
-      I enjoy building creative projects that combine learning with fun.
+      I am a passionate student developer focused on building modern web apps,
+      interactive games, and electronics projects. I enjoy learning by building
+      real-world projects and experimenting with new ideas.
     </p>
-  </section>
+  </div>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Canvas Games</span>
-      <span>Arduino</span>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section">
+  <h2>Projects</h2>
+
+  <div class="projects-box">
+
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200" alt="Project Image">
+      <h3>Geometry Dash Web Game</h3>
+      <p>HTML5 Canvas game with physics, collision & smooth animations.</p>
     </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-
-      <div class="project-card">
-        <h3>Geometry Dash Web Game</h3>
-        <p>HTML5 Canvas game with smooth physics and pixel-perfect collisions.</p>
-        <a href="#">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Collaborative Drawing App</h3>
-        <p>Offline & online drawing app with layers and real-time collaboration.</p>
-        <a href="#">View Project</a>
-      </div>
-
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200" alt="Project Image">
+      <h3>Collaborative Drawing App</h3>
+      <p>Offline & online sketching app with rooms and real-time sync.</p>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Sugam Devkota</p>
-  </footer>
+<footer>
+  © 2026 Sugam Devkota
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
