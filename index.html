@@ -10,6 +10,9 @@
 
 <body>
 
+  <!-- STAR BACKGROUND -->
+  <canvas id="stars"></canvas>
+
   <!-- NAVBAR -->
   <nav>
     <a href="#home">Home</a>
@@ -20,7 +23,7 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div>
+    <div class="hero-content reveal">
       <h1>Sugam Devkota</h1>
       <p>Student • Developer • Creator</p>
     </div>
@@ -31,30 +34,30 @@
     <div class="about-skills reveal">
 
       <!-- SKILLS -->
-      <div class="box">
+      <div class="box glow">
         <h2>Skills</h2>
-        <p>Technologies I work with</p>
+        <p class="muted">Technologies I work with</p>
 
         <div class="skills-icons">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg">
         </div>
       </div>
 
       <!-- ABOUT -->
-      <div class="box">
+      <div class="box glow">
         <h2>About Me</h2>
         <p>
-          I’m Sugam Devkota, a passionate student and developer who loves building
-          clean, interactive websites and experimenting with electronics,
-          automation, and creative coding.
+          I’m Sugam Devkota, a passionate student and developer who loves
+          building modern websites, interactive apps, and experimenting
+          with Arduino and creative coding.
         </p>
         <p>
-          I enjoy turning ideas into real projects using modern web technologies
-          and Arduino-based systems.
+          I enjoy turning ideas into real projects with clean design
+          and smooth user experience.
         </p>
       </div>
 
@@ -67,7 +70,8 @@
 
     <div class="project-grid">
 
-      <div class="project-card reveal glow" onclick="openModal('Geometry Dash Clone','A web-based Geometry Dash style game built using HTML5 Canvas and JavaScript.')">
+      <div class="project-card reveal glow"
+        onclick="openModal('Geometry Dash Clone','A fast-paced Geometry Dash style web game built using HTML5 Canvas and JavaScript.')">
         <img src="https://picsum.photos/600/400?random=1">
         <div class="content">
           <h3>Geometry Dash Clone</h3>
@@ -75,7 +79,8 @@
         </div>
       </div>
 
-      <div class="project-card reveal glow" onclick="openModal('Arduino Robot','Bluetooth controlled robot using Arduino Uno and motor drivers.')">
+      <div class="project-card reveal glow"
+        onclick="openModal('Arduino Robot','Bluetooth controlled Arduino robot with motors and sensors.')">
         <img src="https://picsum.photos/600/400?random=2">
         <div class="content">
           <h3>Arduino Robot</h3>
@@ -83,7 +88,8 @@
         </div>
       </div>
 
-      <div class="project-card reveal glow" onclick="openModal('SketchRoom','A collaborative drawing app with offline and online modes.')">
+      <div class="project-card reveal glow"
+        onclick="openModal('SketchRoom','A collaborative drawing web app with offline and online modes.')">
         <img src="https://picsum.photos/600/400?random=3">
         <div class="content">
           <h3>SketchRoom</h3>
@@ -96,7 +102,7 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="box reveal">
+    <div class="box reveal glow">
       <h2>Contact</h2>
       <p>Email: yourname@email.com</p>
       <p>GitHub: github.com/yourusername</p>
@@ -109,46 +115,14 @@
   </footer>
 
   <!-- PROJECT MODAL -->
-  <div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-    <div class="box" style="max-width:500px; text-align:center;">
+  <div id="modal">
+    <div class="modal-box">
       <h2 id="modalTitle"></h2>
       <p id="modalDesc"></p>
-      <br>
-      <button onclick="closeModal()" style="padding:10px 20px;border:none;border-radius:8px;background:#58a6ff;color:#000;cursor:pointer;">Close</button>
+      <button onclick="closeModal()">Close</button>
     </div>
   </div>
 
-  <!-- SCRIPT -->
-  <script>
-    /* SCROLL REVEAL */
-    const reveals = document.querySelectorAll('.reveal');
-    window.addEventListener('scroll', () => {
-      reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          el.style.opacity = 1;
-          el.style.transform = 'translateY(0)';
-        }
-      });
-    });
-
-    reveals.forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(40px)';
-      el.style.transition = '0.6s ease';
-    });
-
-    /* MODAL */
-    function openModal(title, desc) {
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalDesc').innerText = desc;
-      document.getElementById('modal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
-  </script>
-
+  <script src="./script.js"></script>
 </body>
 </html>
