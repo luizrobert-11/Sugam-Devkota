@@ -136,7 +136,13 @@ section {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
 
 .project-card .content {
   padding: 20px;
@@ -198,3 +204,4 @@ footer {
     font-size: 2.3rem;
   }
 }
+
